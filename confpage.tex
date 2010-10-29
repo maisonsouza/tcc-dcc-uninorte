@@ -1,0 +1,42 @@
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{3cm}{*}
+%\setheadfoot{1cm}{1cm}
+\setheaderspaces{2cm}{*}{*}
+
+\checkandfixthelayout
+
+\makeheadrule{myheadings}{\textwidth}{\normalrulethickness}
+\makeoddhead{myheadings}{\textsc{\leftmark}}{}{\thepage}    %
+\makeevenhead{myheadings}{\thepage}{}{\textsc{\leftmark}}
+
+%\copypagestyle{contents}{myheadings}
+%\makeoddhead{contents}{\textsc{\contentsname}}{}{\thepage}
+%\makeevenhead{contents}{\thepage}{}{\textsc{\contentsname}}
+
+\copypagestyle{bibliography}{myheadings}
+\makeoddhead{bibliography}{\textsc{\bibname}}{}{\thepage}
+\makeevenhead{bibliography}{\thepage}{}{\textsc{\bibname}}
+
+
+\makeatletter
+
+\def\mychaptermark#1{%
+    \markboth{%
+    \ifnum \c@secnumdepth >\m@ne
+        \if@mainmatter
+%           \@chapapp\ \thechapter. \ %
+            \thechapter. \ %
+        \fi
+    \fi
+    #1}{}}%
+
+\def\mysectionmark#1{%
+\markright{%
+    \ifnum \c@secnumdepth > \z@
+        \thesection. \ %
+    \fi
+    #1}}%
+
+\makeatother
+
+\maxsecnumdepth{subsubsection}

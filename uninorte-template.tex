@@ -1,0 +1,217 @@
+\documentclass[12pt,oneside,openright,final,brazil,a4paper,top=3.5cm,left=3cm,
+right=3cm,bottom=2.5cm]{memoir}
+\usepackage[brazilian]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{setspace}
+
+
+\input{confpage.tex}
+
+\sloppy
+
+\newcommand{\tableformat}{\small\centering}
+\newcommand{\figureformat}{\centering}
+
+\newcommand{\tittcc}{
+    \textsf{\bfseries\LARGE Modelo de TCC do Curso de Ciência da\\
+    \vspace{0.8ex}
+    Computação do UniNorte}
+}
+
+\newcommand{\descrtcc}{
+\hspace{\stretch{1}}\parbox{0.51\textwidth}{
+\textbf{Trabalho de Conclusão de Curso} apresentado à Coordenação de Ciência da
+Computação do Centro Universitário do Norte, como parte dos requisitos
+necessários para a obtenção do título de Bacharel em Ciência da Computação.
+}}
+
+\begin{document}
+
+\frontmatter
+\pagestyle{empty}
+
+% -- Capa ---------------------------------------------------------------------
+{\centering
+\textsf{\large
+Centro Universitário do Norte - UniNorte\\
+Curso de Ciência da Computação\\
+}
+
+\vspace*{\stretch{1}}
+
+\tittcc
+
+\vspace*{\stretch{1}}
+
+{\large Nome do Autor}
+
+\vspace*{\stretch{1}}
+
+Manaus \\
+2010
+
+}
+\cleardoublepage
+
+% -- Folha de rosto -----------------------------------------------------------
+{\centering
+{\large Nome do Autor}
+
+\vspace*{\stretch{2}}
+
+\tittcc
+
+\vspace*{\stretch{1}}
+
+\descrtcc
+
+\vspace*{\stretch{1}}
+
+Orientador: Nome do Orientador
+
+}
+\cleardoublepage
+
+% -- Ficha Catalográfica ---------------------------------------------------
+\begin{center}
+{\Large Ficha Catalográfica}
+\cleardoublepage
+\end{center}
+
+% -- Banca Examinadora --------------------------------------------------------
+{\centering
+
+{\large Nome do Autor}
+
+\vspace*{\stretch{2}}
+
+\tittcc
+
+\vspace*{\stretch{1}}
+
+\descrtcc
+
+\vspace*{\stretch{1}}
+
+\begin{center}
+\large Banca Examinadora
+\end{center}
+
+\vspace{1em}
+
+Prof. Nome do Professor(a) -- Orientador\\
+Instituição do professor
+\vspace{1em}
+
+Prof. Nome do Professor(a)\\
+Instituição do professor
+\vspace{1em}
+
+Prof. Nome do Professor(a)\\
+Instituição do professor
+
+\vspace*{\stretch{0.5}}
+
+\begin{center}
+Manaus\\
+2010
+\end{center}
+}
+\cleardoublepage
+
+% -- Dedicatória --------------------------------------------------------------
+\vspace*{\stretch{2}}
+
+\hspace{\stretch{1}}\textit{Texto da dedicatória}\hspace{1cm}
+
+\vspace*{\stretch{1}}
+
+\cleardoublepage
+
+% -- Agradecimentos -----------------------------------------------------------
+
+\chapter*{Agradecimentos}
+\thispagestyle{empty}
+
+{\setlength{\parindent}{0cm}
+
+Texto dos agradecimentos.
+}
+\cleardoublepage
+
+% -- Epígrafe -----------------------------------------------------------------
+
+{\vspace*{\stretch{1}}
+
+\hspace{\stretch{1}}\parbox{0.5\textwidth}{%
+Texto da epígrafe.
+}
+\vspace{1em}
+
+\hspace{\stretch{1}}{\emph{Autor}}
+}
+\cleardoublepage
+
+% -- Resumo -------------------------------------------------------------------
+
+\chapter*{Resumo}
+\thispagestyle{empty}
+
+{Resumo do trabalho deve ser colocado aqui.
+
+\vspace*{\stretch{1}}
+
+\noindent \textsf{Palavras-chave:} Lista de palavras separadas por vírgula.
+}
+\cleardoublepage
+
+% -- Abstract -----------------------------------------------------------------
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+{Abstract's text.
+
+\vspace*{\stretch{1}}
+
+\noindent \textsf{Keywords:} Words
+}
+\cleardoublepage
+
+% -- Índices ------------------------------------------------------------------
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\tableofcontents*  % gera o índice (sumário)
+\cleardoublepage
+
+\listoffigures*    % gera a lista de figuras
+\cleardoublepage
+
+\listoftables*     % gera a lista de tabelas
+\cleardoublepage
+
+\mainmatter
+\pagestyle{myheadings}
+\let\chaptermark=\mychaptermark
+\let\sectionmark=\mysectionmark
+
+\chapter{Introdução}
+\label{cap:cap_1}
+\input{cap1}
+
+\chapter{Capítulo de Desenvolvimento}
+\label{cap:cap_2}
+\input{cap2}
+
+\chapter{Conclusões}
+\label{cap:cap_3}
+\input{cap3}
+
+\cleardoublepage
+\renewcommand{\bibname}{Referências}
+\pagestyle{bibliography}
+\bibliographystyle{apalike}
+\bibliography{uninorte-template}
+\end{document}
