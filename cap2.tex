@@ -2,7 +2,22 @@ Inserir o texto aqui.
 
 \section{Exemplo de Tabela}
 \label{sec:exemplo_tabela}
-Apenas um exemplo de como criar uma tabela em \LaTeX{}.
+Apenas um exemplo de como criar uma tabela em \LaTeX{}. O exemplo pode ser
+visto na tabela \ref{tab:exemplo_tabela}.
+
+  \begin{table}[htbp]
+   \centering
+    \begin{tabular}{|c|c|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+      \multicolumn{1}{|c|}{\textbf{Coluna 2}}\\
+      \hline
+      bla bla bla bla & bla bla bla \\
+      \hline
+    \end{tabular}
+    \caption{Exemplo de uma tabela}
+    \label{tab:exemplo_tabela}
+  \end{table}
 
 \section{Exemplo de Figura}
 
