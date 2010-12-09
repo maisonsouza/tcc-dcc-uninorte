@@ -1,1 +1,40 @@
-Inserir o texto das conclusões aqui.
+Inserir o texto aqui.
+
+\section{Exemplo de Tabela}
+\label{sec:exemplo_tabela}
+Apenas um exemplo de como criar uma tabela em \LaTeX{}. O exemplo pode ser
+visto na tabela \ref{tab:exemplo_tabela}.
+
+  \begin{table}[htbp]
+   \centering
+    \begin{tabular}{|c|c|}
+      \hline
+      \multicolumn{1}{|c|}{\textbf{Coluna 1}} &
+      \multicolumn{1}{|c|}{\textbf{Coluna 2}}\\
+      \hline
+      bla bla bla bla & bla bla bla \\
+      \hline
+    \end{tabular}
+    \caption{Exemplo de uma tabela}
+    \label{tab:exemplo_tabela}
+  \end{table}
+
+\section{Exemplo de Figura}
+Um simples exemplo de como inserir uma figura no documento. A figura
+\ref{fig:uninorte} contempla este exemplo.
+
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{imagens/marca_uninorte.png}
+\caption{Marca do UniNorte}
+\label{fig:uninorte}
+\end{figure}
+
+\section{Exemplo de Referência}
+\subsection{Referência externa}
+Usar referência de livros, links, etc. Exemplo: De acordo com \cite{Knuth78}...
+
+\subsection{Referência interna}
+Podemos referenciar um capítulo, seção ou qualquer parte do documento
+utilizando o caption. Exemplo: citando o Capítulo \ref{cap:cap_1} ou a seção
+\ref{sec:exemplo_tabela}. 
