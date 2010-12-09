@@ -208,16 +208,18 @@ Texto da epígrafe.
 \let\chaptermark=\mychaptermark
 \let\sectionmark=\mysectionmark
 
-\chapter{Introdução}
+\chapter*{Introdução}
 \label{cap:cap_1}
+\addcontentsline{toc}{chapter}{Introdução}
 \input{cap1}
 
 \chapter{Capítulo de Desenvolvimento}
 \label{cap:cap_2}
 \input{cap2}
 
-\chapter{Conclusões}
+\chapter*{Conclusões}
 \label{cap:cap_3}
+\addcontentsline{toc}{chapter}{Conclusões}
 \input{cap3}
 
 \cleardoublepage
