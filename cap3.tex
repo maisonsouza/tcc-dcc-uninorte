@@ -126,3 +126,41 @@ Alguns exemplos de como escrever exemplos matemáticos.
 \section{Nota de Rodapé}
 As notas de rodapé \footnote{Isto é uma nota de rodapé usando \LaTeX} só podem
 ser utilizadas na mesma página do texto, o qual está sendo referenciado.
+
+\section{Exemplos de Algoritmos e Código-fonte}
+\subsection{Algoritmo}
+Um algoritmo escrito em Portugol utilizando o pacote
+\textit{algorithm2e} pode ser visto no Algoritmo \ref{alg:numero_aleatorios}.
+
+Também é possível criar a Lista de Algoritmos. Para isto, deve-se inserir o
+comando \verb \listofalgorithms no início do documento.
+
+\begin{algorithm}
+\linesnumbered
+\Entrada{Dois números inteiros (\emph{inicio} e \emph{fim}).}
+\Saida{Um número inteiro aleatório entre \emph{inicio} e \emph{fim}.}
+\BlankLine
+  \Inicio{
+    \Se{$inicio \geq fim$}
+      {$resposta \leftarrow inicio$\;}
+    \Senao {
+      $random \leftarrow \emph{próximo\_número\_aleatório}()$\;
+      $resposta \leftarrow random * ((fim - inicio + 1) + inicio)$\;
+      \Se{$resposta > fim$}{$resposta \leftarrow fim$;}\
+    }
+    \Retorna {resposta};
+  }
+\caption{Geração de números aleatórios entre dois números}
+\label{alg:numero_aleatorios}
+\end{algorithm}
+
+\subsection{Código-fonte}
+Apenas um exemplo de código-fonte na linguagem C.
+\begin{verbatim}
+int main ()
+{
+    for (int i = 0; i < 100; ++i)
+        printf("%d ", i);
+    return (0);
+}
+\end{verbatim}
