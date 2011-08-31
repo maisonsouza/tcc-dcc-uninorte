@@ -73,7 +73,7 @@ somente quando a mesma é referenciada no texto. Abaixo temos alguns exemplos.
   \item Link: \cite{linux}...
   \item Artigo: \cite{Chandrasekaran99} ...
   \item Dissertação de mestrado: \cite{Denaux05} ...
-  \item Tesde de doutorado: \cite{meudec98} ...
+  \item Tese de doutorado: \cite{meudec98} ...
   \item Proceedings: \cite{berndt03} ...
 \end{itemize}
 
@@ -140,33 +140,7 @@ Alguns exemplos de como escrever exemplos matemáticos.
 As notas de rodapé \footnote{Isto é uma nota de rodapé usando \LaTeX} só podem
 ser utilizadas na mesma página do texto, o qual está sendo referenciado.
 
-\section{Exemplos de Algoritmos e Código-fonte}
-\subsection{Algoritmo}
-Um algoritmo escrito em Portugol utilizando o pacote
-\textit{algorithm2e} pode ser visto no Algoritmo \ref{alg:numero_aleatorios}.
-
-Também é possível criar a Lista de Algoritmos. Para isto, deve-se inserir o
-comando \verb \listofalgorithms no início do documento.
-
-\begin{algorithm}
-\linesnumbered
-\Entrada{Dois números inteiros (\emph{inicio} e \emph{fim}).}
-\Saida{Um número inteiro aleatório entre \emph{inicio} e \emph{fim}.}
-\BlankLine
-  \Inicio{
-    \Se{$inicio \geq fim$}
-      {$resposta \leftarrow inicio$\;}
-    \Senao {
-      $random \leftarrow \emph{próximo\_número\_aleatório}()$\;
-      $resposta \leftarrow random * ((fim - inicio + 1) + inicio)$\;
-      \Se{$resposta > fim$}{$resposta \leftarrow fim$;}\
-    }
-    \Retorna {resposta};
-  }
-\caption{Geração de números aleatórios entre dois números}
-\label{alg:numero_aleatorios}
-\end{algorithm}
-
+\section{Exemplo de Código-fonte}
 \subsection{Código-fonte}
 Apenas um exemplo de código-fonte na linguagem C.
 \begin{verbatim}
@@ -177,3 +151,5 @@ int main ()
     return (0);
 }
 \end{verbatim}
+
+Dica: Para escrever algoritmos utiliza-se o pacote \emph{algorithm2}.
